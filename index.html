@@ -6,5 +6,20 @@
 <body>
     <h1>असद बाबा चैट एरिना</h1>
     <p>स्वागत है मेरी वेबसाइट पर!</p>
+
+    <div id="chat-container">
+        <textarea id="chat-box" readonly style="width:100%; height:200px;"></textarea><br>
+        <input type="text" id="message" placeholder="यहाँ लिखें...">
+        <button onclick="sendMessage()">भेजें</button>
+    </div>
+    
+    <script>
+        function sendMessage() {
+            var msg = document.getElementById('message').value;
+            var box = document.getElementById('chat-box');
+            box.value += "असद: " + msg + "\n";
+            document.getElementById('message').value = "";
+        }
+    </script>
 </body>
 </html>
